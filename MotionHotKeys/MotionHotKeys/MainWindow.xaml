@@ -1,0 +1,17 @@
+﻿<Window x:Class="MotionHotKeys.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:MotionHotKeys="clr-namespace:MotionHotKeys" mc:Ignorable="d"
+        DataContext="{Binding Path=MainWindow}"
+        Title="MainWindow" Height="350" Width="525" d:DataContext="{d:DesignInstance MotionHotKeys:MainWindow}">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100" />
+            <RowDefinition Height="100" />
+        </Grid.RowDefinitions>
+        <TextBox Grid.Row="0" Width="200" Height="35" Text="{Binding Path=TextStr, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" />
+        <Button Grid.Row="1" Width="100" Height="25" Content="Raise Space" Name="RaiseSpace" Click="RaiseSpace_Click" />
+    </Grid>
+</Window>
